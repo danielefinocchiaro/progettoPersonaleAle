@@ -1,7 +1,5 @@
 import React from "react";
-import library from "../assets/library.json";
 import LibraryCol from "./LibraryCol";
-import LibraryRow from "./LibraryRow";
 import {
   ArrowRightIcon,
   BookmarkIcon,
@@ -14,6 +12,7 @@ import {
   Squares2X2Icon,
 } from "@heroicons/react/24/outline";
 import DropDown from "./DropDown";
+import DropDownTwo from "./DropDownTwo";
 export default function SidebarBottom() {
   return (
     <div className="flex flex-col py-4 bg-[#121212] w-96 rounded-t-md rounded-b-md mt-2 ml-1">
@@ -66,7 +65,7 @@ export default function SidebarBottom() {
       </div>
       <div className="flex flex-row gap-6 px-6 py-4 justify-between ">
         <MagnifyingGlassIcon className="w-6 h-6 text-neutral-400 hover:text-white hover:bg-[#222222] hover:rounded-xl" />
-        <DropDown
+        <DropDownTwo
           header={
             <div className="flex items-center justify-end text-neutral-400 hover:text-white hover:scale-105 gap-1">
               Recenti
@@ -114,7 +113,7 @@ export default function SidebarBottom() {
               Autore
             </a>
           </div>
-          <hr className="w-full text-gray-100 ml-4"></hr>
+          <hr className="w-40 text-gray-100 m-2"></hr>
           <div>
             <a
               href="#"
@@ -150,7 +149,7 @@ export default function SidebarBottom() {
               Griglia
             </a>
           </div>
-        </DropDown>
+        </DropDownTwo>
       </div>
 
       <div>

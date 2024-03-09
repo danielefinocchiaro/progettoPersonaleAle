@@ -1,0 +1,166 @@
+{
+  "popular": [
+    {
+      "id": 1,
+      "name": "The Tortured Poets Department",
+      "artist": "Taylor Swift",
+      "link": "https://metronews.it/wp-content/uploads/2024/02/Schermata-2024-02-05-alle-18.15.58.png"
+    },
+    {
+      "id": 2,
+      "name": "La Divina Commedia",
+      "artist": "Tedua",
+      "link": "https://hips.hearstapps.com/hmg-prod/images/tedua-ladivinacommedia-cover-6478c5884f1d8.jpg"
+    },
+    {
+      "id": 3,
+      "name": "RELAX",
+      "artist": "Calcutta",
+      "link": "https://www.sentireascoltare.com/wp-content/uploads/2023/10/calcutta-relax.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Club Dogo",
+      "artist": "Club Dogo",
+      "link": "https://shop.universalmusic.it/cdn/shop/files/COVER_CD_801d74fb-e879-4f30-9082-e816454ad873.jpg?v=1702377944&width=1024"
+    },
+    {
+      "id": 5,
+      "name": "For All the Dogs",
+      "artist": "Drake",
+      "link": "data:image/jpeg;base64,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"
+    },
+    {
+      "id": 6,
+      "name": "CVLT",
+      "artist": "Salmo, Noyz Narcos",
+      "link": "https://m.media-amazon.com/images/I/71hMcERXgVL._UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Ultimo piano",
+      "artist": "Dani Faiv",
+      "link": "https://i.scdn.co/image/ab67616d00001e027184e3e82888e8d1016d16dc"
+    },
+    {
+      "id": 8,
+      "name": "american dream",
+      "artist": "21 Savage",
+      "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNYziRVVnk6E5FgBi-gBhxMCrlmlpll1a1kA&usqp=CAU"
+    }
+  ],
+  "recents": [
+    {
+      "id": 9,
+      "name": "This is Anuel AA",
+      "artist": "Spotify",
+      "link": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO1E2PZu-default.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Keta Music, Vol.3",
+      "artist": "Emis Killa",
+      "link": "https://images.genius.com/46fe2c162fb53a463d51a09bdafb4356.1000x1000x1.png"
+    },
+    {
+      "id": 11,
+      "name": "Le cose cambiano",
+      "artist": "Massimo Pericolo",
+      "link": "https://i.scdn.co/image/ab67616d0000b2735f6fb9109b83fb4f425b3eaf"
+    },
+    {
+      "id": 12,
+      "name": "Eres Mia",
+      "artist": "Romeo Santos",
+      "link": "https://i.scdn.co/image/ab67616d0000b273e9da42890bbd629df1e8f640"
+    },
+    {
+      "id": 13,
+      "name": "Hit Rap Italiane",
+      "artist": "Spotify",
+      "link": "https://i.scdn.co/image/ab67706f000000020725223c619f0db7172be0f8"
+    },
+    {
+      "id": 14,
+      "name": "Emanuele",
+      "artist": "Geolier",
+      "link": "https://m.media-amazon.com/images/I/A1P5H1w-mnL._UF1000,1000_QL80_.jpg"
+    }
+  ],
+  "danilo": [
+    {
+      "id": 15,
+      "name": "1989 (Taylor's Version)",
+      "artist": "Taylor Swift",
+      "link": "https://upload.wikimedia.org/wikipedia/en/d/d5/Taylor_Swift_-_1989_%28Taylor%27s_Version%29.png"
+    },
+    {
+      "id": 16,
+      "name": "reputation",
+      "artist": "Taylor Swift",
+      "link": "https://people.com/thmb/bnv58OSnUSsOsnwP_c9f85fBdv0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(992x0:994x2)/taylor-swift7-2000-48f9bfb372c34e36866773b1ede0b372.jpg"
+    },
+    {
+      "id": 17,
+      "name": "folklore (deluxe version)",
+      "artist": "Taylor Swift",
+      "link": "https://static.independent.co.uk/2020/10/21/12/newFile-7.jpg?width=1200&height=1200&fit=crop"
+    },
+    {
+      "id": 18,
+      "name": "evermore",
+      "artist": "Taylor Swift",
+      "link": "https://m.media-amazon.com/images/I/61U043b+YGL._UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Red (Taylor's Version)",
+      "artist": "Taylor Swift",
+      "link": "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Taylor_Swift_-_Red_%28Taylor%27s_Version%29.png/220px-Taylor_Swift_-_Red_%28Taylor%27s_Version%29.png"
+    },
+    {
+      "id": 20,
+      "name": "Speak Now",
+      "artist": "Taylor Swift",
+      "link": "https://m.media-amazon.com/images/I/81JC4vsDIPL._UF1000,1000_QL80_.jpg"
+    }
+  ],
+  "continues": [
+    {
+      "id": 21,
+      "name": "Sorpesa",
+      "artist": "CanovA, Nayt",
+      "link": "https://i.scdn.co/image/ab67616d0000b273a34bd4f34e0991cf30d73683"
+    },
+    {
+      "id": 22,
+      "name": "See You Again",
+      "artist": "Tyler, The Creator, Kali Uchis",
+      "link": "https://i.scdn.co/image/ab67616d0000b2738940ac99f49e44f59e6f7fb3"
+    },
+    {
+      "id": 23,
+      "name": "Rolling in the Deep",
+      "artist": "Adele",
+      "link": "https://m.media-amazon.com/images/I/61lMwNQGYbL._UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 24,
+      "name": "Maldito Alcohol",
+      "artist": "Pitbull, AFROJACK",
+      "link": "https://i1.sndcdn.com/artworks-qqYTk958O2VfIzXk-KG0Ldg-t500x500.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Radio Gotham",
+      "artist": "Rose Villain",
+      "link": "https://upload.wikimedia.org/wikipedia/en/9/95/Radio_Gotham.jpg"
+    },
+    {
+      "id": 21,
+      "name": "Mega Hit Mix",
+      "artist": "Spotify",
+      "link": "https://i.scdn.co/image/ab67706f0000000235fed49a1e4edb70fb29853a"
+    }
+  ]
+}

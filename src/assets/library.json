@@ -51,79 +51,79 @@
   ],
   "artists": [
     {
-      "id": 1,
+      "id": 9,
       "name": "Måneskin",
       "link": "https://i.scdn.co/image/ab6761610000e5eb46d0db8a86fda630ec12401f"
     },
     {
-      "id": 2,
+      "id": 10,
       "name": "Ernia",
       "link": "https://i.scdn.co/image/ab6761610000e5ebfc9ae482b4fdedc7210d5ff2"
     },
     {
-      "id": 3,
+      "id": 11,
       "name": "Gemitaiz",
       "link": "https://i.scdn.co/image/ab6761610000e5eb346ccf26b3ed8366b00bf736"
     },
     {
-      "id": 4,
+      "id": 12,
       "name": "J Balvin",
       "link": "https://i.scdn.co/image/ab67616100005174c7d26683e32f2af830bcba32"
     },
     {
-      "id": 5,
+      "id": 13,
       "name": "The Weeknd",
       "link": "https://i.scdn.co/image/ab6761610000e5eb214f3cf1cbe7139c1e26ffbb"
     },
     {
-      "id": 6,
+      "id": 14,
       "name": "Beyoncé",
       "link": "https://i.scdn.co/image/ab6761610000e5eb2b7962ada66cbea99dcb0caa"
     },
     {
-      "id": 7,
+      "id": 15,
       "name": "Fabri Fibra",
       "link": "https://i.scdn.co/image/ab6761610000e5eb1b68f6b1f6a87556c61b8628"
     },
     {
-      "id": 8,
+      "id": 16,
       "name": "Coez",
       "link": "https://i.scdn.co/image/ab676161000051748044505721270eb00050b188"
     }
   ],
   "playlists": [
     {
-      "id": 1,
+      "id": 17,
       "name": "Sanremo 2024",
       "artist": "Spotify",
       "link": "https://i.scdn.co/image/ab67706f00000002ea1c6554e98097ac547a71ef"
     },
     {
-      "id": 2,
+      "id": 18,
       "name": "childhood tunes",
       "artist": "angelicacrespii",
       "link": "https://e.snmc.io/i/600/s/0c3950e68e7b4d9a8e708a6667d8cfc1/7492365/katy-perry-prism-Cover-Art.jpg"
     },
     {
-      "id": 3,
+      "id": 19,
       "name": "io",
       "artist": "ale canna",
       "link": "https://images.genius.com/39c714b2e04afd57fff77e083b0135f5.1000x1000x1.png"
     },
     {
-      "id": 4,
+      "id": 20,
       "name": "Depressione",
       "artist": "Daniele",
       "link": "https://m.media-amazon.com/images/I/91+zXo4wK-L._UF1000,1000_QL80_.jpg"
     },
     {
-      "id": 5,
+      "id": 21,
       "name": "famiglia riscica",
       "artist": "Mattia",
       "link": "https://i1.sndcdn.com/artworks-000196774553-b6vym4-t500x500.jpg"
     },
     {
-      "id": 6,
+      "id": 22,
       "name": "i tuoi brani preferiti del 2023",
       "artist": "Spotify",
       "link": "https://i.scdn.co/image/ab67706c0000da84ce7e01b65259e66a9a7016de"

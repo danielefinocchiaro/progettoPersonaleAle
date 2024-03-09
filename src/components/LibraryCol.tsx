@@ -1,17 +1,19 @@
 import LibraryRow from "./LibraryRow";
 import library from "../assets/library.json";
-import { LibraryData } from "../types";
 
 export default function LibraryCol() {
+  const artist = library.artists;
+  const album = library.album;
+  const playlist = library.playlists;
   return (
-    <div className="flex flex-col h-64 overflow-y-auto scroll">
-      {library.artists.map((artist) => {
+    <div className="flex flex-col h-full max-h-full overflow-y-scroll">
+      {artist.map((artist) => {
         return <LibraryRow data={artist} type="artist" />;
       })}{" "}
-      {library.album.map((album) => {
+      {album.map((album) => {
         return <LibraryRow data={album} type={"album"} />;
       })}{" "}
-      {library.playlists.map((playlist) => {
+      {playlist.map((playlist) => {
         return <LibraryRow data={playlist} type={"playlist"} />;
       })}
     </div>

@@ -18,9 +18,9 @@ export default function SectionOne(props: { data: LibraryData[] }) {
   }
 
   return (
-    <div className="bg-gradient-to-t from-black to bg-neutral-800 grow px-6 py-4 ml-3 rounded-t-md rounded-b-md ">
+    <div className="bg-[#121212] grow px-6 py-4 ml-4 rounded-t-md">
       <div className="flex flex-row justify-between">
-        <h1 className="text-white font-semibold text-left text-3xl pt-10">
+        <h1 className="text-white font-semibold text-left text-3xl pt-10 ml-1">
           {" "}
           {saluto}{" "}
         </h1>

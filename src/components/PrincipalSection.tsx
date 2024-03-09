@@ -1,14 +1,19 @@
 import SectionOne from "./SectionOne";
 import SectionTwo from "./SectionTwo";
 import SectionThree from "./SectionThree";
+import SectionFour from "./SectionFour";
+import SectionFive from "./SectionFive";
 import library from "../assets/library.json";
+import libraryTwo from "../assets/libraryTwo.json";
 
 export default function PrincipalSection() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-y-scroll h-[85vh] bg-black ">
       <SectionOne data={library.artists} />
-      <SectionTwo data={library.album} />
-      <SectionThree data={library.playlists} />
+      <SectionTwo data={libraryTwo.popular} />
+      <SectionFive data={libraryTwo.continues} />
+      <SectionFour data={libraryTwo.danilo} />
+      <SectionThree data={libraryTwo.recents} />
     </div>
   );
 }

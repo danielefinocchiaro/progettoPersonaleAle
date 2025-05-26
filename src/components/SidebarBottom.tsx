@@ -1,5 +1,3 @@
-import React from "react";
-import LibraryCol from "./LibraryCol";
 import {
   ArrowRightIcon,
   BookmarkIcon,
@@ -12,9 +10,13 @@ import {
   Squares2X2Icon,
   CheckIcon,
 } from "@heroicons/react/24/outline";
+import library from "../assets/library.json";
+
 import { useState } from "react";
 import DropDown from "./DropDown";
 import DropDownTwo from "./DropDownTwo";
+import LibraryCol from "./LibraryCol";
+import New from "./New";
 
 export default function SidebarBottom() {
   const [recent, setRecent] = useState(false);
@@ -140,7 +142,7 @@ export default function SidebarBottom() {
               }}
               className={` ${
                 alf
-                  ? "text-green-500 flex-row-reverse justify-between "
+                  ? "text-green-500 flex-row-reverse justify-between  "
                   : "text-gray-100  "
               }  gap-x-2 px-4 py-2 text-sm flex hover:bg-[#3E3E3E] hover:rounded-sm mx-3 hover:cursor-pointer`}
               href="#"
@@ -220,7 +222,7 @@ export default function SidebarBottom() {
               }}
               className={` ${
                 gri ? "text-green-500 justify-between " : "text-gray-100  "
-              }  text-gray-100 gap-x-2 px-4 py-2 hover:rounded-sm mx-3 text-sm flex hover:bg-[#3E3E3E]`}
+              }  text-gray-100 gap-x-2 px-4 py-2 hover:rounded-sm mx-3 text-sm flex hover:bg-[#3E3E3E] z-30`}
               href="#"
             >
               {gri && <CheckIcon className="h-5 order-last" />}
@@ -230,7 +232,7 @@ export default function SidebarBottom() {
           </div>
         </DropDownTwo>
       </div>
-      <LibraryCol />
+      <New />
     </div>
   );
 }

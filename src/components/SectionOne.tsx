@@ -1,17 +1,15 @@
 import { LibraryData } from "../types";
 import SectionRow from "./SectionRow";
-import CardRow from "./CardTwo";
-import SectionTwo from "./SectionTwo";
 
 export default function SectionOne(props: { data: LibraryData[] }) {
   const { data } = props;
   const oraCorrente = new Date().getHours();
   let saluto;
-  if (oraCorrente >= 6 && oraCorrente <= 13) {
+  if (oraCorrente >= 6 && oraCorrente < 13) {
     saluto = "Buongiorno";
-  } else if (oraCorrente <= 19) {
+  } else if (oraCorrente >= 13 && oraCorrente < 19) {
     saluto = "Buon pomeriggio";
-  } else if (oraCorrente <= 22) {
+  } else if (oraCorrente >= 19 && oraCorrente < 22) {
     saluto = "Buonasera";
   } else {
     saluto = "Buonanotte";
@@ -25,7 +23,7 @@ export default function SectionOne(props: { data: LibraryData[] }) {
           {saluto}{" "}
         </h1>
         <img
-          src="https://billboard.it/wp-content/uploads/2020/11/Nayt_foto-stampa-819x1024.jpg"
+          src="https://play-lh.googleusercontent.com/kKLJqTRTc-XqNjeo46l7AeUvRa4ybAmC3pt36Pyh4NnjrMTkTrSMBX2c7IDTB04zTNBl"
           className="h-10 w-10 rounded-full justify-end items-start flex"
         />
       </div>

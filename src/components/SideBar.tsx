@@ -1,4 +1,3 @@
-import React from "react";
 import SidebarTop from "./SidebarTop";
 import SidebarBottom from "./SidebarBottom";
 export default function SideBar() {

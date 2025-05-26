@@ -17,7 +17,7 @@ export default function DropDownTwo(props: {
         </button>
       </div>
       {click && (
-        <div className="absolute  z-10 mt-2 w-44 origin-top-left rounded-sm bg-[#282828] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <div className="absolute z-20 mt-2 w-44 origin-top-left rounded-sm bg-[#282828] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <button>
             <div className="py-1">{props.children}</div>
           </button>

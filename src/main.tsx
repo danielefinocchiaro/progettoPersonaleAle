@@ -4,7 +4,7 @@ import App from "./App.js";
 import "./index.css";
 const root = document.getElementById("root");
 if (!root) {
-  throw new Error("");
+  throw Error("");
 }
 ReactDOM.createRoot(root).render(
   <React.StrictMode>

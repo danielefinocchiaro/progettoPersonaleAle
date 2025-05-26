@@ -10,10 +10,10 @@ export default function PrincipalSection() {
   return (
     <div className="overflow-y-scroll h-[85vh] bg-black ">
       <SectionOne data={library.artists} />
-      <SectionTwo data={libraryTwo.popular} />
       <SectionFive data={libraryTwo.continues} />
+      <SectionThree data={libraryTwo.past} />
+      <SectionTwo data={libraryTwo.popular} />
       <SectionFour data={libraryTwo.danilo} />
-      <SectionThree data={libraryTwo.recents} />
     </div>
   );
 }

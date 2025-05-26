@@ -29,7 +29,7 @@ export default function Player() {
         />
         <span> 2:48 </span>
       </div>
-      <div className="text-neutral-400 h-48 w-48 flex gap-3 mt-2">
+      <div className="text-neutral-400 h-48 w-48 flex gap-3 mt-2 ">
         <div className="flex flex-col items-center relative">
           <ArrowsRightLeftIcon
             onClick={() => {

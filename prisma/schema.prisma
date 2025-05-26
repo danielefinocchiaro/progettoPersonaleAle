@@ -1,0 +1,103 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String     @id @default(uuid())
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  username  String
+  email     String     @unique
+  password  String
+  Playlist  Playlist[]
+}
+
+model Playlist {
+  id               String             @id @default(uuid())
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime           @updatedAt
+  lastTimePlayed   String             @default("")
+  img              String
+  name             String
+  author           User               @relation(fields: [authorId], references: [id])
+  authorId         String
+  SongsOnPlaylists SongsOnPlaylists[]
+}
+
+model Artist {
+  id              String            @id @default(uuid())
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  lastTimePlayed  String
+  name            String
+  img             String
+  listeners       Int
+  concerts        DateTime
+  SongsOnArtists  SongsOnArtists[]
+  ArtistsOnAlbums ArtistsOnAlbums[]
+}
+
+model Song {
+  id               String             @id @default(uuid())
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime           @updatedAt
+  lastTimePlayed   String
+  name             String
+  img              String
+  duration         Int
+  year             DateTime
+  lyrics           String
+  SongsOnArtists   SongsOnArtists[]
+  SongsOnPlaylists SongsOnPlaylists[]
+  SongsOnAlbums    SongsOnAlbums[]
+}
+
+model Album {
+  id              String            @id @default(uuid())
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  lastTimePlayed  String
+  name            String
+  img             String
+  duration        Int
+  year            DateTime
+  ArtistsOnAlbums ArtistsOnAlbums[]
+  SongsOnAlbums   SongsOnAlbums[]
+}
+
+model SongsOnArtists {
+  id       String @id @default(uuid())
+  songId   String
+  song     Song   @relation(fields: [songId], references: [id])
+  artistId String
+  artist   Artist @relation(fields: [artistId], references: [id])
+}
+
+model SongsOnPlaylists {
+  id         String   @id @default(uuid())
+  songId     String
+  song       Song     @relation(fields: [songId], references: [id])
+  playlistId String
+  playlist   Playlist @relation(fields: [playlistId], references: [id])
+}
+
+model ArtistsOnAlbums {
+  id       String @id @default(uuid())
+  artistId String
+  artist   Artist @relation(fields: [artistId], references: [id])
+  albumId  String
+  album    Album  @relation(fields: [albumId], references: [id])
+}
+
+model SongsOnAlbums {
+  id      String @id @default(uuid())
+  songId  String
+  song    Song   @relation(fields: [songId], references: [id])
+  albumId String
+  album   Album  @relation(fields: [albumId], references: [id])
+}

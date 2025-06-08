@@ -1,5 +1,5 @@
 import CardTwo from "./CardTwo";
-import { LibraryData } from "../types";
+import type { LibraryData } from "../types";
 export default function SectionTwo(props: { data: LibraryData[] }) {
   const { data } = props;
   return (

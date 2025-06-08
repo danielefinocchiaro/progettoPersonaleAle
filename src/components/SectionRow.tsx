@@ -1,4 +1,4 @@
-import { LibraryData } from "../types";
+import type { LibraryData } from "../types";
 import { PlayCircleIcon } from "@heroicons/react/24/outline";
 export default function SectionRow(props: { artist: LibraryData }) {
   const { artist } = props;

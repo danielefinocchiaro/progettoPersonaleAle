@@ -1,4 +1,4 @@
-import { LibraryData } from "../types";
+import type { LibraryData } from "../types";
 import SectionRow from "./SectionRow";
 
 export default function SectionOne(props: { data: LibraryData[] }) {

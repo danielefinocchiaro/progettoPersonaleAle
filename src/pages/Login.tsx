@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { trpc } from "../utils/trpc";
 import { useForm } from "react-hook-form";
-import { LoginInput, loginInput } from "../types";
+import { type LoginInput, loginInput } from "../types";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 export default function Login() {

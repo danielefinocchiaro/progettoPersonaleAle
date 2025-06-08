@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { string, array, z } from "zod";
 export type LoginInput = z.infer<typeof loginInput>;
 

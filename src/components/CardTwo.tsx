@@ -1,5 +1,5 @@
 import { PlayCircleIcon } from "@heroicons/react/24/outline";
-import { LibraryData } from "../types";
+import type { LibraryData } from "../types";
 export default function CardTwo(props: { popular: LibraryData }) {
   const { popular } = props;
   return (

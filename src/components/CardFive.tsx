@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { PlayCircleIcon } from "@heroicons/react/24/outline";
-import { LibraryData } from "../types";
+import type { LibraryData } from "../types";
 
 let activeAudio: HTMLAudioElement | null = null; // Variabile globale per tracciare l'audio attivo
 

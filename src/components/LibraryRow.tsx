@@ -1,4 +1,4 @@
-import { LibraryData } from "../types";
+import type { LibraryData } from "../types";
 import library from "../assets/library.json";
 
 export default function LibraryRow(props: { data: LibraryData; type: string }) {
@@ -27,7 +27,7 @@ export default function LibraryRow(props: { data: LibraryData; type: string }) {
           <div className="text-neutral-400">{`Album • ${data.ArtistsOnAlbums?.map(
             (artist) => {
               return artist.artist.name;
-            }
+            },
           ).join(", ")}`}</div>
         </div>
       </div>

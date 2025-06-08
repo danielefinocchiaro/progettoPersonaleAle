@@ -1,5 +1,5 @@
 import CardThree from "./CardThree";
-import { LibraryData } from "../types";
+import type { LibraryData } from "../types";
 export default function SectionThree(props: { data: LibraryData[] }) {
   const { data } = props;
   return (

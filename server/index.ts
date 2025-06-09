@@ -26,9 +26,9 @@ const appRouter = router({
 
       if (user) {
         return user.password === input.password;
-      } else {
-        return "INVALID CREDENTIAL";
       }
+
+      return "INVALID CREDENTIAL";
     }),
 
   artistByFilter: publicProcedure.input(filter).query(async ({ input }) => {

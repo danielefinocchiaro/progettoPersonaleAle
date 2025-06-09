@@ -1,3 +1,4 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { trpc } from "../utils/trpc";
 import { useForm } from "react-hook-form";
@@ -9,17 +10,20 @@ export default function Login() {
   const form = useForm<LoginInput>({
     resolver: zodResolver(loginInput),
     defaultValues: {
-      email: "alessiacannella123@gmail.com",
+      email: "",
     },
   });
 
+  const [loginError, setLoginError] = React.useState<string | null>(null);
+
   const onSubmit = async (data: LoginInput) => {
+    setLoginError(null);
     const queryLogin = await trpc.login.query({
       email: data.email,
       password: data.password,
     });
     if (queryLogin === "INVALID CREDENTIAL") {
-      console.log(queryLogin);
+      setLoginError("Email o password non corretti.");
     } else {
       navigate("/Dashboard");
     }
@@ -27,35 +31,42 @@ export default function Login() {
   };
 
   return (
-    <div className="bg-gradient-to-t from-black to bg-neutral-800 flex-grow h-full">
-      <div className="bg-neutral-950 h-28 flex items-center">
-        <img src="/logo.png" className="h-9 pl-16" />
+    <div className="bg-gradient-to-t from-black to bg-neutral-800 min-h-screen w-full overflow-x-hidden px-2 sm:px-4 md:px-8 flex flex-col items-center justify-center">
+      <div className="bg-neutral-950 h-20 sm:h-28 flex items-center w-full justify-center">
+        <img src="/logo.png" className="h-8 sm:h-9" alt="Spotify Logo" />
       </div>
-      <form onSubmit={form.handleSubmit(onSubmit)}>
-        <div className="bg-gradient-to-t from-neutral-900 to bg-neutral-950 rounded-t-md rounded-b-md px-12 pt-12 mb-8 mt-8 m-auto w-full sm:w-3/4 md:w-1/2 lg:w-1/3 h-5/6 flex flex-col items-center justify-center">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="w-full flex justify-center py-4 sm:py-8"
+      >
+        <div className="bg-gradient-to-t from-neutral-900 to bg-neutral-950 rounded-t-md rounded-b-md px-4 sm:px-8 md:px-12 pt-8 sm:pt-12 mb-4 sm:mb-8 mt-4 sm:mt-8 w-full max-w-md md:max-w-lg lg:max-w-xl flex flex-col items-center justify-center gap-4 sm:gap-6 text-center">
+          {loginError && (
+            <div className="text-red-500 font-bold text-center mb-2 w-full">
+              {loginError}
+            </div>
+          )}
           <h1 className="font-bold text-5xl text-center text-white">
             Accedi a Spotify
           </h1>
-          <div className="pt-12">
-            <h3 className="text-base font-bold text-white">
+          <div className="pt-8 sm:pt-12 w-full flex flex-col items-center">
+            <h3 className="text-base font-bold text-white pb-4">
               Indirizzo e-mail o nome utente
             </h3>
-            <label htmlFor="username"></label>
+            {/* Removed empty label for accessibility */}
             <input
-              className="w-full sm:w-80 md:w-80 h-10 border-inherit rounded-sm"
+              className="w-full max-w-xs h-10 border-inherit rounded-sm text-center"
               type="email"
               {...form.register("email")}
-              placeholder="indirizzo e-mail o nome utente"
+              placeholder="Indirizzo e-mail"
               required
             />
           </div>
-          <div className="pt-5 flex flex-col items-center justify-center">
-            <h3 className="text-base font-bold text-white self-start">
+          <div className="pt-4 sm:pt-5 flex flex-col items-center justify-center w-full gap-4">
+            <h3 className="text-base font-bold text-white text-center w-full">
               Password
             </h3>
-            <label htmlFor="password"></label>
             <input
-              className="w-full sm:w-80 md:w-80 h-10 border-inherit rounded-sm relative"
+              className="w-full max-w-xs h-10 border-inherit rounded-sm text-center"
               type="password"
               {...form.register("password")}
               placeholder="Password"
@@ -63,7 +74,7 @@ export default function Login() {
             />
             <button
               type="submit"
-              className="font-bold bg-green-600 rounded-3xl w-full sm:w-80 md:w-80 h-12 hover:scale-105 mt-12"
+              className="font-bold bg-green-600 rounded-3xl w-full max-w-xs h-12 hover:scale-105 mt-8 sm:mt-12"
             >
               Accedi
             </button>
@@ -74,7 +85,7 @@ export default function Login() {
           >
             Hai dimenticato la password?
           </a>
-          <hr className="w-full text-gray-400"></hr>
+          <hr className="w-full text-gray-400" />
           <h2 className="text-gray-400 py-10">
             Non hai un account?{" "}
             <a
@@ -86,12 +97,6 @@ export default function Login() {
           </h2>
         </div>
       </form>
-      <footer className="h-16 p-5 text-gray-400 bg-neutral-900 text-center text-xs">
-        Questo sito è protetto da reCAPTCHA e si applicano l
-        googlePrivacyPolicyLink Informativa sulla privacy
-        googlePrivacyPolicyLink e i googleTermsLink Termini di servizio
-        googleTermsLink di Google.
-      </footer>
     </div>
   );
 }

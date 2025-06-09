@@ -19,6 +19,7 @@ export default function LibraryCol() {
     queryKey: ["playlist"],
     queryFn: () => trpc.playlistByName.query(),
   });
+  console.log(artists, albums, playlists);
 
   return (
     <div className="flex flex-col h-full max-h-full overflow-y-scroll">

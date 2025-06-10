@@ -13,12 +13,12 @@ export const RetrievePatternInput = z.object({
 });
 
 export interface LibraryData {
-  audio: string | undefined;
-  link: string | undefined;
+  audio?: string;
+  link?: string;
   artist: ReactNode;
-  id: string;
+  id: string | number;
   name: string;
-  img: string;
+  img?: string;
   ArtistsOnAlbums?: any[];
   author?: any;
 }

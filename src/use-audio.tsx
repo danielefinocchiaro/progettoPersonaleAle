@@ -55,6 +55,7 @@ export const useAudio = () => {
 
     setPlayingSong(song);
     audioRef.current = new Audio(song.audio);
+    audioRef.current.volume = volume;
     audioRef.current
       .play()
       .catch((error) => console.error("Playback error:", error));

@@ -49,6 +49,7 @@ model Song {
   lastTimePlayed   String
   name             String
   img              String
+  audio            String
   duration         Int
   year             DateTime
   lyrics           String

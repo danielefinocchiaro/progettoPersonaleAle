@@ -1,21 +1,24 @@
 import {
-  ArrowPathRoundedSquareIcon,
-  ArrowsRightLeftIcon,
-  ChevronDoubleRightIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
+  PauseCircleIcon,
   PlayCircleIcon,
 } from "@heroicons/react/24/outline";
-import { useRef, useState } from "react";
+import { useState } from "react";
+import { useAudio } from "~/use-audio";
 
 export default function Player() {
-  const sliderRef = useRef();
-
+  const { isPlaying, audioRef, pause, resume } = useAudio();
   const [progress, setProgress] = useState<string>("15");
-  const [arrows, setArrows] = useState(false);
-  const [arrowss, setArrowss] = useState(false);
+
+  if (audioRef.current) {
+    audioRef.current.ontimeupdate = () => {
+      setProgress(audioRef.current?.currentTime.toString() || "0");
+    };
+  }
+
   return (
-    <div className="flex flex-col-reverse items-center text-neutral-800 font-semibold w-1/3">
+    <div className="flex flex-col-reverse items-center text-neutral-800 font-semibold">
       <div className=" gap-2 flex items-center text-neutral-400">
         <span> 0:35 </span>
         <input
@@ -29,42 +32,20 @@ export default function Player() {
         />
         <span> 2:48 </span>
       </div>
-      <div className="text-neutral-400 h-48 w-48 flex gap-3 mt-2 ">
-        <div className="flex flex-col items-center relative">
-          <ArrowsRightLeftIcon
-            onClick={() => {
-              setArrows(!arrows);
-            }}
-            className={` ${
-              arrows ? "text-green-500" : "text-neutral-400 hover:text-white"
-            } w-8 transform duration-200 hover:cursor-pointer`}
+      <div className="text-neutral-400 h-48 w-48 flex gap-3 mt-2 items-center justify-center">
+        <ChevronLeftIcon className="size-8 hover:text-white" />
+        {isPlaying ? (
+          <PauseCircleIcon
+            className="size-8 hover:text-white"
+            onClick={pause}
           />
-          {arrows && (
-            <div className="text-green-500 absolute top-5 right-4 font-bold">
-              .
-            </div>
-          )}
-        </div>
-
-        <ChevronLeftIcon className="hover:text-white" />
-        <PlayCircleIcon className="hover:text-white" />
-        <ChevronRightIcon className="hover:text-white" />
-
-        <div className="flex flex-col items-center relative">
-          <ArrowPathRoundedSquareIcon
-            onClick={() => {
-              setArrowss(!arrowss);
-            }}
-            className={` ${
-              arrowss ? "text-green-500" : "text-neutral-400 hover:text-white "
-            } w-8 transform duration-200 hover:cursor-pointer`}
+        ) : (
+          <PlayCircleIcon
+            className="size-8 hover:text-white"
+            onClick={resume}
           />
-          {arrowss && (
-            <div className="text-green-500 absolute top-5 right-4 font-bold">
-              .
-            </div>
-          )}
-        </div>
+        )}
+        <ChevronRightIcon className="size-8 hover:text-white" />
       </div>
     </div>
   );

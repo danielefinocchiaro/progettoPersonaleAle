@@ -22,7 +22,7 @@ export default function SectionRow(props: { artist: LibraryData }) {
   };
   return (
     <div
-      className={`h-[3.0rem] ${isMobile ? 'w-full' : 'w-[13.4rem]'} flex flex-row m-1 text-white bg-neutral-800 hover:bg-[#3E3E3E] rounded-sm gap-3 my-1 items-center group hover:cursor-pointer`}
+      className={`h-[3.0rem] ${isMobile ? "w-full" : "w-[13.4rem]"} flex flex-row m-1 text-white bg-neutral-800 hover:bg-[#3E3E3E] rounded-sm gap-2 my-1 items-center group hover:cursor-pointer`}
       onClick={isMobile ? handlePlayPause : undefined}
       onKeyDown={
         isMobile ? (e) => e.key === "Enter" && handlePlayPause() : undefined
@@ -33,7 +33,7 @@ export default function SectionRow(props: { artist: LibraryData }) {
     >
       {isPlaying && song?.id === artist.id ? (
         <PauseCircleIcon
-          className={`h-10 w-10 order-last ml-auto mr-3 ${isMobile ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
+          className={`h-8 w-8 order-last ml-auto mr-3 ${isMobile ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
           onClick={(e) => {
             e.stopPropagation();
             handlePlayPause();
@@ -50,7 +50,7 @@ export default function SectionRow(props: { artist: LibraryData }) {
         />
       ) : (
         <PlayCircleIcon
-          className={`h-10 w-10 order-last ml-auto mr-3 ${isMobile ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
+          className={`h-8 w-8 order-last ml-auto mr-3 ${isMobile ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
           onClick={(e) => {
             e.stopPropagation();
             handlePlayPause();
@@ -66,15 +66,15 @@ export default function SectionRow(props: { artist: LibraryData }) {
           aria-label={`Play ${artist.name}`}
         />
       )}
-      <div className="h-12 w-12 justify-around">
+      <div className="min-h-12 min-w-12 h-12 w-12 flex-shrink-0 overflow-hidden">
         <img
           src={artist.link}
           alt={artist.name as string}
-          className="h-full w-full rounded-sm"
+          className="h-full w-full object-cover rounded-sm"
         />
       </div>
-      <div className="flex flex-col font-medium">
-        <div>{artist.name}</div>
+      <div className="flex flex-col font-medium overflow-hidden">
+        <div className="truncate">{artist.name}</div>
       </div>
     </div>
   );

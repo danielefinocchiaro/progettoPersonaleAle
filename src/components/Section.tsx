@@ -21,7 +21,7 @@ export default function Section({
 }: SectionProps) {
   // Get mobile state
   const isMobile = useMobile();
-  
+
   // Determine rounded corners class
   const roundedClass =
     rounded === "top"
@@ -39,10 +39,13 @@ export default function Section({
       <h2 className="text-white font-semibold text-left text-3xl pt-5 gap-3 my-1 items-center hover:underline ml-2">
         {title}
       </h2>
-      <div className={`
-        ${gridOnMobile && isMobile 
-          ? "grid grid-cols-2 gap-2" 
-          : "flex-row flex overflow-x-auto"} 
+      <div
+        className={`
+        ${
+          gridOnMobile && isMobile
+            ? "grid grid-cols-2 gap-2"
+            : "flex-row flex overflow-x-auto"
+        } 
         gap-1`}
       >
         {data.map((item, index) => children(item, index))}

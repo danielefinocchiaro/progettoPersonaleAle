@@ -268,10 +268,10 @@ export default function MobilePlayer() {
         )}
 
         <div className="overflow-hidden">
-          <p className="font-medium text-sm truncate max-w-[150px] sm:max-w-[200px]">
+          <p className="font-medium text-md uppercase truncate max-w-[150px] sm:max-w-[200px]">
             {song?.name || "Not Playing"}
           </p>
-          <p className="text-white/75 text-xs hover:underline hover:text-white truncate max-w-[150px] sm:max-w-[200px]">
+          <p className="text-white/75 font-thin text-xs hover:underline hover:text-white truncate max-w-[150px] sm:max-w-[200px]">
             {song?.artist}
           </p>
         </div>
@@ -403,7 +403,7 @@ export default function MobilePlayer() {
           )}
         </div>
       </div>
-      <div className="bg-white/15 relative h-2">
+      <div className="bg-white/15 relative h-1 mx-3">
         <input
           type="range"
           onChange={handleSeekChange}
@@ -420,7 +420,7 @@ export default function MobilePlayer() {
           aria-valuetext={formatTime(currentTime)}
         />
         <div
-          className="bg-[#1DB954] h-2 relative"
+          className="bg-[#1DB954] h-1 relative"
           style={{ width: `${progressPercentage}%` }}
         >
           {song && (
@@ -429,7 +429,7 @@ export default function MobilePlayer() {
         </div>
       </div>
       {song && (
-        <div className="flex justify-between text-xs text-white/60 px-2 py-1">
+        <div className="flex justify-between text-xs text-white/60 px-2 py-1 mx-2">
           <span className="min-w-[30px]">{formatTime(currentTime)}</span>
           <span className="min-w-[30px] text-right">
             {formatTime(duration)}

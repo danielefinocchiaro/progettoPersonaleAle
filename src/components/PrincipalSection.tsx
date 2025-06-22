@@ -44,7 +44,9 @@ export default function PrincipalSection() {
 
       {/* Past Section */}
       <Section title="Un salto nel passato" data={libraryTwo.past}>
-        {(item: LibraryData) => <Card key={item.id} item={item} />}
+        {(item: LibraryData) => (
+          <Card key={item.id} item={item} withAudio={true} />
+        )}
       </Section>
 
       {/* Popular Albums Section */}

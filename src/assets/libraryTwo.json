@@ -54,37 +54,43 @@
       "id": 9,
       "name": "We Don't Talk Anymore",
       "artist": "Charlie Puth, Selena Gomez",
-      "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw7lOSUx3MqvWkQWjq-TPzLPoMCit2kFdnRg&s"
-    },
-    {
-      "id": 9,
-      "name": "On The Floor",
-      "artist": "Jennifer Lopez, Pitbull",
-      "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZMay4Zv5CMKDpdudpSq9Jc4aSzZqmFU75vg&s"
+      "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw7lOSUx3MqvWkQWjq-TPzLPoMCit2kFdnRg&s",
+      "audio": "/assets/music/We Dont Talk Anymore.mp3"
     },
     {
       "id": 10,
+      "name": "On The Floor",
+      "artist": "Jennifer Lopez, Pitbull",
+      "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZMay4Zv5CMKDpdudpSq9Jc4aSzZqmFU75vg&s",
+      "audio": "/assets/music/On The Floor.mp3"
+    },
+    {
+      "id": 11,
       "name": "Roar",
       "artist": "Katy Perry",
-      "link": "https://i.scdn.co/image/ab67616d00001e021e9a057052d59004caf47e22"
+      "link": "https://i.scdn.co/image/ab67616d00001e021e9a057052d59004caf47e22",
+      "audio": "/assets/music/Roar.mp3"
     },
     {
       "id": 12,
       "name": "Gimme More",
       "artist": "Britney Spears",
-      "link": "https://i.scdn.co/image/ab67616d0000b2736e2d78c5cdf83679e0e88b2e"
-    },
-    {
-      "id": 14,
-      "name": "What Makes You Beautiful",
-      "artist": "One Direction",
-      "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPEzYTlC6lefp7MIrdyAXlaigT0TtVSiaiqA&s"
+      "link": "https://i.scdn.co/image/ab67616d0000b2736e2d78c5cdf83679e0e88b2e",
+      "audio": "/assets/music/Gimme More.mp3"
     },
     {
       "id": 13,
       "name": "Price Tag",
       "artist": "Jessie J",
-      "link": "https://i1.sndcdn.com/artworks-vgnKMn4KwscZ-0-t500x500.jpg"
+      "link": "https://i1.sndcdn.com/artworks-vgnKMn4KwscZ-0-t500x500.jpg",
+      "audio": "/assets/music/Price Tag.mp3"
+    },
+    {
+      "id": 14,
+      "name": "What Makes You Beautiful",
+      "artist": "One Direction",
+      "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPEzYTlC6lefp7MIrdyAXlaigT0TtVSiaiqA&s",
+      "audio": "/assets/music/What Makes You Beautiful.mp3"
     }
   ],
   "danilo": [

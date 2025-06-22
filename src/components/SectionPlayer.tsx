@@ -11,7 +11,7 @@ export default function SectionPlayer() {
     <>
       {/* Mobile player - only visible on mobile screens */}
       <div
-        className={`md:hidden ${isMobile ? "block" : "hidden"} fixed bottom-0 left-0 right-0 z-20`}
+        className={`md:hidden ${isMobile ? "block" : "hidden"} fixed bottom-0 left-0 right-0 z-20 px-2`}
       >
         <MobilePlayer />
       </div>

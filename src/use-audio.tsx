@@ -130,6 +130,17 @@ export const useAudio = () => {
     audioRef.current = null;
   };
 
+  const seek = (time: number) => {
+    if (!audioRef.current) return;
+
+    // Ensure time is within valid range
+    const safeTime = Math.max(
+      0,
+      Math.min(time, audioRef.current.duration || 0),
+    );
+    audioRef.current.currentTime = safeTime;
+  };
+
   return {
     song: playingSong,
     audioRef,
@@ -140,5 +151,6 @@ export const useAudio = () => {
     pause,
     resume,
     clear,
+    seek,
   };
 };

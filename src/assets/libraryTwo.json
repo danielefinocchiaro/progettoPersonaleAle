@@ -4,43 +4,50 @@
       "id": 1,
       "name": "LETTERA Q",
       "artist": "nayt",
-      "link": "https://i.scdn.co/image/ab67616d0000b273a1a948f041194f87ff1b90a9"
+      "link": "https://i.scdn.co/image/ab67616d0000b273a1a948f041194f87ff1b90a9",
+      "audio": "/assets/music/nayt - Il Debito.mp3"
     },
     {
       "id": 2,
       "name": "DtMF",
       "artist": "Bad Bunny",
-      "link": "https://i.scdn.co/image/ab67616d0000b273bbd45c8d36e0e045ef640411"
+      "link": "https://i.scdn.co/image/ab67616d0000b273bbd45c8d36e0e045ef640411",
+      "audio": "/assets/music/Bad Bunny - DtMF.mp3"
     },
     {
       "id": 3,
       "name": "BRAT",
       "artist": "Charli XCX",
-      "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTAV8VX5V4hjniGekhu6ff8tSqyWKKSCiUcg&s"
+      "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTAV8VX5V4hjniGekhu6ff8tSqyWKKSCiUcg&s",
+      "audio": "/assets/music/Charli xcx - 360.mp3"
     },
     {
       "id": 4,
       "name": "LOCURA",
       "artist": "Lazza",
-      "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXofIELwSkQ3uUxvJdB9aAJ89H9yO_-dPlYQ&s"
+      "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXofIELwSkQ3uUxvJdB9aAJ89H9yO_-dPlYQ&s",
+      "audio": "/assets/music/Locura.mp3"
     },
     {
       "id": 5,
       "name": "Short n'Sweet",
       "artist": "Sabrina Carpenter",
-      "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCkV5lRNJ8TWfjjKnJ3lyAlqFxJtvAYBNdww&s"
+      "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCkV5lRNJ8TWfjjKnJ3lyAlqFxJtvAYBNdww&s",
+      "audio": "/assets/music/Espresso.mp3"
     },
     {
       "id": 7,
       "name": "HIT ME HARD AND SOFT",
       "artist": "Billie Eilish",
-      "link": "https://www.universalmusic.it/dbcommon/file/news/img1/13061_medium.jpg"
+      "link": "https://www.universalmusic.it/dbcommon/file/news/img1/13061_medium.jpg",
+      "audio": "/assets/music/Billie Eilish - Lunch.mp3"
     },
     {
       "id": 8,
       "name": "Vera Baddie",
       "artist": "Anna",
-      "link": "https://cdn.shopify.com/s/files/1/0414/0557/9425/collections/Anna-VeraBaddie-mobile.jpg?v=1718193660"
+      "link": "https://cdn.shopify.com/s/files/1/0414/0557/9425/collections/Anna-VeraBaddie-mobile.jpg?v=1718193660",
+      "audio": "/assets/music/ANNA - VIENI DALLA BADDIE.mp3"
     }
   ],
   "past": [

@@ -36,7 +36,7 @@ export default function Section({
     <div
       className={`flex flex-col bg-[#121212] px-6 py-4 md:ml-4 ${roundedClass} ${className}`}
     >
-      <h2 className="text-white font-semibold text-left text-3xl pt-5 gap-3 my-1 items-center hover:underline ml-2">
+      <h2 className="text-white font-semibold text-left text-3xl pt-5 gap-3 my-1 items-center hover:underline ml-1">
         {title}
       </h2>
       <div

@@ -58,13 +58,13 @@ export default function PrincipalSection() {
       </Section>
 
       {/* Created for User Section */}
-      <Section
+      {/*  <Section
         title="Creato per Alessia"
         data={libraryTwo.danilo}
         rounded="bottom"
       >
         {(item: LibraryData) => <Card key={item.id} item={item} />}
-      </Section>
+      </Section> */}
     </div>
   );
 }

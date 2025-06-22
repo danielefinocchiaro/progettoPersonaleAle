@@ -59,37 +59,38 @@
     {
       "id": 10,
       "name": "Ernia",
-      "link": "https://i.scdn.co/image/ab6761610000e5ebfc9ae482b4fdedc7210d5ff2"
+      "link": "https://i.scdn.co/image/ab6761610000e5ebfc9ae482b4fdedc7210d5ff2",
+      "audio": "/assets/music/PARAFULMINI.mp3"
     },
     {
       "id": 11,
       "name": "Gemitaiz",
-      "link": "https://i.scdn.co/image/ab6761610000e5eb346ccf26b3ed8366b00bf736"
+      "link": "https://i.scdn.co/image/ab6761610000e5eb346ccf26b3ed8366b00bf736",
+      "audio": "/assets/music/Davide.mp3"
     },
     {
       "id": 12,
       "name": "J Balvin",
-      "link": "https://i.scdn.co/image/ab67616100005174c7d26683e32f2af830bcba32"
+      "link": "https://i.scdn.co/image/ab67616100005174c7d26683e32f2af830bcba32",
+      "audio": "/assets/music/J Balvin - Mi Gente.mp3"
     },
     {
       "id": 13,
       "name": "The Weeknd",
-      "link": "https://i.scdn.co/image/ab6761610000e5eb214f3cf1cbe7139c1e26ffbb"
+      "link": "https://i.scdn.co/image/ab6761610000e5eb214f3cf1cbe7139c1e26ffbb",
+      "audio": "/assets/music/The Weeknd - Blinding Lights.mp3"
     },
     {
       "id": 14,
       "name": "Beyoncé",
-      "link": "https://i.scdn.co/image/ab6761610000e5eb2b7962ada66cbea99dcb0caa"
+      "link": "https://i.scdn.co/image/ab6761610000e5eb2b7962ada66cbea99dcb0caa",
+      "audio": "/assets/music/TEXAS HOLD EM.mp3"
     },
     {
       "id": 15,
       "name": "Fabri Fibra",
-      "link": "https://i.scdn.co/image/ab6761610000e5eb1b68f6b1f6a87556c61b8628"
-    },
-    {
-      "id": 16,
-      "name": "Coez",
-      "link": "https://i.scdn.co/image/ab676161000051748044505721270eb00050b188"
+      "link": "https://i.scdn.co/image/ab6761610000e5eb1b68f6b1f6a87556c61b8628",
+      "audio": "/assets/music/Fenomeno.mp3"
     }
   ],
   "playlists": [

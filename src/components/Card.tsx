@@ -51,51 +51,52 @@ export default function Card({ item, withAudio = false }: CardProps) {
           alt={`${item.name} by ${item.artist}`}
           className="rounded-md"
         />
-        {isPlaying && song?.id === item.id ? (
-          <PauseCircleIcon
-            className={`h-16 w-16 absolute order-last cursor-pointer 
+        {withAudio &&
+          (isPlaying && song?.id === item.id ? (
+            <PauseCircleIcon
+              className={`h-16 w-16 absolute order-last cursor-pointer 
               ${
                 isMobile
                   ? "opacity-80 bottom-1/2 right-1/2 translate-x-1/2 translate-y-1/2 bg-black/50 rounded-full p-2"
                   : "opacity-0 group-hover:opacity-100 bottom-0 right-0 p-1 justify-items-end"
               }`}
-            onClick={(e) => {
-              e.stopPropagation(); // Prevent triggering parent div click on non-mobile
-              handlePlayPause();
-            }}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
+              onClick={(e) => {
+                e.stopPropagation(); // Prevent triggering parent div click on non-mobile
                 handlePlayPause();
-              }
-            }}
-            aria-label={`Pause ${item.name}`}
-          />
-        ) : (
-          <PlayCircleIcon
-            className={`h-16 w-16 absolute order-last cursor-pointer 
+              }}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  handlePlayPause();
+                }
+              }}
+              aria-label={`Pause ${item.name}`}
+            />
+          ) : (
+            <PlayCircleIcon
+              className={`h-16 w-16 absolute order-last cursor-pointer 
               ${
                 isMobile
                   ? "opacity-80 bottom-1/2 right-1/2 translate-x-1/2 translate-y-1/2 bg-black/50 rounded-full p-2"
                   : "opacity-0 group-hover:opacity-100 bottom-0 right-0 p-1 justify-items-end"
               }`}
-            onClick={(e) => {
-              e.stopPropagation(); // Prevent triggering parent div click on non-mobile
-              handlePlayPause();
-            }}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
+              onClick={(e) => {
+                e.stopPropagation(); // Prevent triggering parent div click on non-mobile
                 handlePlayPause();
-              }
-            }}
-            aria-label={`Play ${item.name}`}
-          />
-        )}
+              }}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  handlePlayPause();
+                }
+              }}
+              aria-label={`Play ${item.name}`}
+            />
+          ))}
       </div>
       <div className="flex flex-col font-medium">
         <div>{item.name}</div>

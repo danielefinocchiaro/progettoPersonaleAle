@@ -272,7 +272,7 @@ export default function MobilePlayer() {
             {song?.name || "Not Playing"}
           </p>
           <p className="text-white/75 text-xs hover:underline hover:text-white truncate max-w-[150px] sm:max-w-[200px]">
-            {song?.artist || "Select a song"}
+            {song?.artist}
           </p>
         </div>
 

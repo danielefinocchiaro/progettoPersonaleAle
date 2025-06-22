@@ -22,7 +22,7 @@ export default function SectionRow(props: { artist: LibraryData }) {
   };
   return (
     <div
-      className="h-[3.0rem] w-[13.4rem] flex flex-row m-1 text-white bg-neutral-800 hover:bg-[#3E3E3E] rounded-sm gap-3 my-1 items-center group hover:cursor-pointer"
+      className={`h-[3.0rem] ${isMobile ? 'w-full' : 'w-[13.4rem]'} flex flex-row m-1 text-white bg-neutral-800 hover:bg-[#3E3E3E] rounded-sm gap-3 my-1 items-center group hover:cursor-pointer`}
       onClick={isMobile ? handlePlayPause : undefined}
       onKeyDown={
         isMobile ? (e) => e.key === "Enter" && handlePlayPause() : undefined

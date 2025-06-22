@@ -1,5 +1,6 @@
 import type { LibraryData } from "../types";
 import type { ReactNode } from "react";
+import { useMobile } from "~/use-mobile";
 
 interface SectionProps {
   title: string;
@@ -7,6 +8,7 @@ interface SectionProps {
   children: (item: LibraryData, index: number) => ReactNode;
   rounded?: "top" | "bottom" | "both" | "none";
   className?: string;
+  gridOnMobile?: boolean;
 }
 
 export default function Section({
@@ -15,7 +17,11 @@ export default function Section({
   children,
   rounded = "none",
   className = "",
+  gridOnMobile = false,
 }: SectionProps) {
+  // Get mobile state
+  const isMobile = useMobile();
+  
   // Determine rounded corners class
   const roundedClass =
     rounded === "top"
@@ -33,7 +39,12 @@ export default function Section({
       <h2 className="text-white font-semibold text-left text-3xl pt-5 gap-3 my-1 items-center hover:underline ml-2">
         {title}
       </h2>
-      <div className="flex-row flex overflow-x-auto gap-1">
+      <div className={`
+        ${gridOnMobile && isMobile 
+          ? "grid grid-cols-2 gap-2" 
+          : "flex-row flex overflow-x-auto"} 
+        gap-1`}
+      >
         {data.map((item, index) => children(item, index))}
       </div>
     </div>

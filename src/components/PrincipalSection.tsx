@@ -31,6 +31,7 @@ export default function PrincipalSection() {
         data={library.artists}
         rounded="top"
         className="pt-4"
+        gridOnMobile={true}
       >
         {(item: LibraryData) => <SectionRow key={item.id} artist={item} />}
       </Section>

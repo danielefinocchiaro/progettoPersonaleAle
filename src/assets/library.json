@@ -91,6 +91,13 @@
       "name": "Fabri Fibra",
       "link": "https://i.scdn.co/image/ab6761610000e5eb1b68f6b1f6a87556c61b8628",
       "audio": "/assets/music/Fenomeno.mp3"
+    },
+    {
+      "id": 16,
+      "name": "What Makes You Beautiful",
+      "artist": "One Direction",
+      "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPEzYTlC6lefp7MIrdyAXlaigT0TtVSiaiqA&s",
+      "audio": "/assets/music/What Makes You Beautiful.mp3"
     }
   ],
   "playlists": [

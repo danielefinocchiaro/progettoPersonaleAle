@@ -52,7 +52,9 @@ export default function PrincipalSection() {
 
       {/* Popular Albums Section */}
       <Section title="Album più popolari" data={libraryTwo.popular}>
-        {(item: LibraryData) => <Card key={item.id} item={item} />}
+        {(item: LibraryData) => (
+          <Card key={item.id} item={item} withAudio={true} />
+        )}
       </Section>
 
       {/* Created for User Section */}

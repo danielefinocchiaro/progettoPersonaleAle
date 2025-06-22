@@ -52,8 +52,9 @@
   "artists": [
     {
       "id": 9,
-      "name": "Måneskin",
-      "link": "https://i.scdn.co/image/ab6761610000e5eb46d0db8a86fda630ec12401f"
+      "name": "Maneskin",
+      "link": "https://i.scdn.co/image/ab6761610000e5eb46d0db8a86fda630ec12401f",
+      "audio": "/assets/music/Maneskin - Beggin.mp3"
     },
     {
       "id": 10,

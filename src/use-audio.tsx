@@ -14,29 +14,34 @@ const SongContext = createContext<{
   setPlayingSong: (song: LibraryData | null) => void;
   volume: number;
   setVolume: (volume: number) => void;
+  isPlaying: boolean;
+  setIsPlaying: (isPlaying: boolean) => void;
 } | null>(null);
 
 export const SongProvider = ({ children }: { children: React.ReactNode }) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [playingSong, setPlayingSong] = useState<LibraryData | null>(null);
   const [volume, setVolume] = useState<number>(1);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = volume;
     }
-  }, [volume, audioRef.current]);
+  }, [volume]);
 
   return (
     <SongContext.Provider
-      value={{ audioRef, playingSong, setPlayingSong, volume, setVolume }}
+      value={{
+        audioRef,
+        playingSong,
+        setPlayingSong,
+        volume,
+        setVolume,
+        isPlaying,
+        setIsPlaying,
+      }}
     >
-      {playingSong && (
-        <audio ref={audioRef} className="absolute hidden">
-          <source src={playingSong.audio} type="audio/mpeg" />
-          <track kind="captions" src="" label="English captions" />
-        </audio>
-      )}
       {children}
     </SongContext.Provider>
   );
@@ -47,44 +52,88 @@ export const useAudio = () => {
   if (!context)
     throw new Error("useAudio must be used within a SongContext.Provider");
 
-  const { audioRef, playingSong, setPlayingSong, volume, setVolume } = context;
+  const {
+    audioRef,
+    playingSong,
+    setPlayingSong,
+    volume,
+    setVolume,
+    isPlaying,
+    setIsPlaying,
+  } = context;
 
   const play = (song: LibraryData) => {
     console.log("playing");
-    if (playingSong && playingSong.id === song.id) return;
 
+    // If it's the same song that's already loaded, toggle play/pause
+    if (playingSong && playingSong.id === song.id) {
+      if (isPlaying) {
+        audioRef.current?.pause();
+        setIsPlaying(false);
+      } else {
+        audioRef.current?.play();
+        setIsPlaying(true);
+      }
+      return;
+    }
+
+    // Clear previous audio if exists
+    if (audioRef.current) {
+      audioRef.current.pause();
+    }
+
+    // Set up new audio
     setPlayingSong(song);
     audioRef.current = new Audio(song.audio);
     audioRef.current.volume = volume;
-    audioRef.current
-      .play()
-      .catch((error) => console.error("Playback error:", error));
 
-    console.log(audioRef.current.paused);
-
+    // Set up ended event
     audioRef.current.onended = () => {
       setPlayingSong(null);
+      setIsPlaying(false);
     };
+
+    // Play the audio
+    audioRef.current
+      .play()
+      .then(() => {
+        setIsPlaying(true);
+      })
+      .catch((error) => {
+        console.error("Playback error:", error);
+        setIsPlaying(false);
+      });
   };
 
   const pause = () => {
-    console.log("pausing", audioRef.current?.paused); // ma che cazzo
-    audioRef.current?.pause();
+    if (!audioRef.current) return;
+
+    audioRef.current.pause();
+    setIsPlaying(false);
   };
 
   const resume = () => {
-    if (audioRef.current) audioRef.current.play();
+    if (!audioRef.current) return;
+
+    audioRef.current
+      .play()
+      .then(() => setIsPlaying(true))
+      .catch((error) => console.error("Resume error:", error));
   };
 
   const clear = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+    }
     setPlayingSong(null);
+    setIsPlaying(false);
     audioRef.current = null;
   };
 
   return {
     song: playingSong,
     audioRef,
-    isPlaying: !(audioRef.current?.paused ?? true),
+    isPlaying,
     volume,
     setVolume,
     play,

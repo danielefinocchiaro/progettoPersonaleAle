@@ -138,7 +138,7 @@
       "name": "Lost On You",
       "artist": "LP",
       "link": "https://i.scdn.co/image/ab67616d00001e02a3b280033ea0beb5a83cd130",
-      "audio": "/assets/music/LP – Lost On You.mp3"
+      "audio": "/assets/music/LP - Lost On You.mp3"
     },
 
     {
@@ -146,21 +146,21 @@
       "name": "Rolling in the Deep",
       "artist": "Adele",
       "link": "https://m.media-amazon.com/images/I/61lMwNQGYbL._UF1000,1000_QL80_.jpg",
-      "audio": "https://www.myinstants.com/media/sounds/pew_pew-dknight556-1379997159.mp3"
+      "audio": "/assets/music/Rolling In The Deep.mp3"
     },
     {
       "id": 24,
       "name": "Maldito Alcohol",
       "artist": "Pitbull, AFROJACK",
       "link": "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/Maldito_Alcohol_Song.jpg/220px-Maldito_Alcohol_Song.jpg",
-      "audio": "https://www.myinstants.com/media/sounds/vine-boom.mp3"
+      "audio": "/assets/music/Maldito Alcohol.mp3"
     },
     {
       "id": 25,
       "name": "Margarita",
       "artist": "Elodie, Marracash",
       "link": "https://m.media-amazon.com/images/I/41Op4nF36HL._UXNaN_FMjpg_QL85_.jpg",
-      "audio": "https://www.myinstants.com/media/sounds/vine-boom.mp3"
+      "audio": "/assets/music/Margarita.mp3"
     },
     {
       "id": 26,

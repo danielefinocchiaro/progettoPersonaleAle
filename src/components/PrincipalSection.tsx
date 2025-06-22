@@ -54,7 +54,7 @@ export default function PrincipalSection() {
 
       {/* Created for User Section */}
       <Section
-        title="Creato per Danilo"
+        title="Creato per Alessia"
         data={libraryTwo.danilo}
         rounded="bottom"
       >

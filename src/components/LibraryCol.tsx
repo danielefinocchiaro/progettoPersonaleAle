@@ -19,18 +19,43 @@ export default function LibraryCol() {
     queryKey: ["playlist"],
     queryFn: () => trpc.playlistByName.query(),
   });
-  console.log(artists, albums, playlists);
+
+  // Map data to LibraryData format
+  const mappedArtists = artists?.map((artist) => ({
+    ...artist,
+    artist: artist.name, // Add artist property to satisfy LibraryData interface
+    audio: library.artists[0]?.audio || "",
+    link: "",
+  }));
+
+  const mappedAlbums = albums?.map((album) => ({
+    ...album,
+    artist: album.ArtistsOnAlbums?.[0]?.artist.name || "Unknown Artist", // Add artist property
+    audio: library.artists[1]?.audio || "",
+    link: "",
+  }));
+
+  const mappedPlaylists = playlists?.map((playlist) => ({
+    ...playlist,
+    artist: playlist.author?.username || "Unknown Author", // Add artist property
+    audio: library.artists[2]?.audio || "",
+    link: "",
+  }));
 
   return (
     <div className="flex flex-col h-full max-h-full overflow-y-scroll">
-      {artists?.map((artist) => (
-        <LibraryRow data={artist} type="artist" />
+      {mappedArtists?.map((artist) => (
+        <LibraryRow key={`artist-${artist.id}`} data={artist} type="artist" />
       ))}
-      {albums?.map((album) => (
-        <LibraryRow data={album} type="album" />
+      {mappedAlbums?.map((album) => (
+        <LibraryRow key={`album-${album.id}`} data={album} type="album" />
       ))}
-      {playlists?.map((playlist) => (
-        <LibraryRow data={playlist} type="playlist" />
+      {mappedPlaylists?.map((playlist) => (
+        <LibraryRow
+          key={`playlist-${playlist.id}`}
+          data={playlist}
+          type="playlist"
+        />
       ))}
     </div>
   );

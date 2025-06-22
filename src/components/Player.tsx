@@ -120,12 +120,6 @@ export default function Player() {
         )}
         <ChevronRightIcon className="size-8 hover:text-white cursor-pointer" />
       </div>
-      {song && (
-        <div className="text-center mb-2">
-          <div className="text-white font-medium">{song.name}</div>
-          <div className="text-neutral-400 text-sm">{song.artist}</div>
-        </div>
-      )}
     </div>
   );
 }
